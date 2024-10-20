@@ -15,3 +15,4 @@
 <li class="has-line-data" data-line-start="11" data-line-end="12">plataformas: <em>windows</em>, <em>darwin (macOS)</em>, <em>linux</em></li>
 <li class="has-line-data" data-line-start="12" data-line-end="13">arquiteturas: <em>x64</em>, <em>x32</em></li>
 </ul>
+<p class="has-line-data" data-line-start="0" data-line-end="1">para apenas executar o programa sem compilar, basta digitar <em>npm start</em></p>
