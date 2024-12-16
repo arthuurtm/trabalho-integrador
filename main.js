@@ -10,7 +10,8 @@ function createWindow() {
         }
     });
 
-    mainWindow.loadFile('index.html');
+    const indexPath = path.join(__dirname, 'src', 'index.html');
+    mainWindow.loadFile(indexPath);
 }
 
 app.whenReady().then(createWindow);

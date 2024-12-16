@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="../css/loginForm.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/buttons.css">
+</head>
+<body>
+  <div class="page">
+    <div class="formLogin">
+        <div class="left">
+            <img src="../img/logo.png" alt="Logo" id="logo" />
+            <h1>Fazer login</h1>
+        </div>
+        <div class="right">
+            <div class="formStep" data-step="1">
+                <form id="formStep1" class="formContainer">
+                    <div class="sepElements">
+                        <label for="personalName">E-mail</label>
+                        <input type="text" id="personalEmail" placeholder="Digite seu e-mail" />
+                
+                        <label for="lastName">Senha</label>
+                        <input type="password" id="password" placeholder="Digite sua senha" />
+                    </div>
+                    <div class="sepButton">
+                        <button class="btn" type="submit">Continuar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="../js/formModel.js"></script>
+</body>
+</html>

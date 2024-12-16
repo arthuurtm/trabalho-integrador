@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="../css/loginForm.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/buttons.css">
+</head>
+<body>
+  <div class="page">
+    <div class="formLogin">
+        <div class="left">
+            <img src="../img/logo.png" alt="Logo" id="logo" />
+            <h1>Criar uma conta</h1>
+        </div>
+        <div class="right">
+
+            <div class="formStep" data-step="1">
+                <form id="formStep1" class="formContainer">
+                    <div class="sepElements">
+                        <label for="personalName">Nome</label>
+                        <input type="text" id="personalName" placeholder="Digite seu nome" />
+                
+                        <label for="lastName">Sobrenome (opcional)</label>
+                        <input type="text" id="lastName" placeholder="Digite seu sobrenome" />
+                    </div>
+                    <div class="sepButton">
+                        <button class="btn" type="submit">Próxima</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="formStep" data-step="2" style="display: none;">
+                <form id="formStep2" class="formContainer">
+                    <div class="sepElements">
+                        <label for="CPF">CPF</label>
+                        <input type="text" id="CPF" placeholder="Digite seu CPF" autofocus />
+                        <label for="tel">Telefone</label>
+                        <input type="tel" id="tel" placeholder="Digite seu telefone" />
+                        <div class="error-message" id="error-message-2" style="display: none; margin-bottom: 15px;">⛔</div>
+                    </div>
+                    <div class="sepButton">
+                        <button class="btn" type="submit">Continuar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="formStep" data-step="3" style="display: none;">
+                <form id="formStep3" class="formContainer">
+                    <div class="sepElements">
+                        <label for="newPassword">Senha</label>
+                        <input type="password" id="newPassword" placeholder="Digite sua senha" required />
+                        <label for="confirmPassword">Confirme a senha</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirme sua senha" required />
+                        <div class="error-message" id="error-message-3" style="display: none; margin-bottom: 15px;">⛔</div>
+                    </div>
+                    <div class="sepButton">
+                        <button class="btn" type="submit">Finalizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="../js/formModel.js"></script>
+</body>
+</html>

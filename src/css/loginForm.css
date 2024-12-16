@@ -1,0 +1,171 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    align-self: center;
+    height: 100%;
+}
+
+.formLogin {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border-radius: 15px;
+    padding: 35px;
+    gap: 5px;
+    width: 800px;
+    height: 400px;
+    border: 2px solid var(--border);
+    background-color: var(--bg);
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Separa inputs e botão */
+    height: 100%; /* Ocupa toda a altura disponível */
+    box-sizing: border-box;
+}
+
+.formStep {
+    height: 100%;
+}
+  
+.sepElements {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre inputs */
+    margin-top: auto; /* Centraliza verticalmente */
+    margin-bottom: auto; /* Centraliza verticalmente */
+    justify-content: center;
+    height: 80%;
+}
+  
+.sepButton {
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    margin-top: 15px;
+}
+
+#logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;  /* ou qualquer outro valor que você deseja */
+    height: auto; /* mantém a proporção da imagem */
+}
+
+.formLogin .left {
+    grid-column: 1;
+}
+
+.formLogin .right {
+    grid-column: 2;
+}
+
+.formLogin h1 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.formLogin p {
+    font-size: 15px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.formLogin input {
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+    /* background-color: var(--input-bg); */
+    color: var(--input-text);
+  }
+  
+.formLogin input:focus {
+    border-color: #1778FB;
+    outline: none;
+}
+
+.container {
+    margin: 35% 30% 35% 30%;
+    text-align: justify;
+}
+
+.uiMiniMsgBox {
+    text-align: center;
+    margin: 15px 30px 0px 30px;
+}
+
+.formLogin label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.formLogin a {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: var(--text);
+    transition: all linear 160ms;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.formLogin a:hover {
+    color: #bb0b0b;
+}
+
+.show {
+    display: block;
+}
+
+.ext-loginOp-sep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+}
+
+/* .slide-left-enter-active, .slide-left-leave-active {
+    transition: transform 0.5s ease;
+}
+  
+.slide-left-enter-from {
+    transform: translateX(100%);
+}
+
+.slide-left-leave-to {
+    transform: translateX(-100%);
+} */
+  
+
+@media (max-width: 600px) {
+
+    .page {
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+
+    .formLogin {
+        border-radius: 0px;
+        box-shadow: none;
+        flex-direction: column;
+        padding: none;
+        min-width: 30vh;
+        border: none;
+        width: none;
+    }
+
+    .container {
+        margin: 0px 45px 30px 45px;
+    }
+
+}
