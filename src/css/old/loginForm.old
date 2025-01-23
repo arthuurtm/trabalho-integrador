@@ -1,0 +1,106 @@
+.page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* background-image: url('../img/formBack.svg');
+    background-repeat: repeat; */
+}
+
+.form-main {
+    flex: 0 2 auto;
+    width: 400px;
+    height: auto;
+    padding: 15px 30px;
+    border: 5px solid var(--border);
+    box-shadow: 8px 8px 0.5px 0.5px var(--border);
+    background-color: var(--bg);
+    gap: 10px;
+    /* backdrop-filter: blur(5px); */
+    /* -webkit-backdrop-filter: blur(5px); */
+}
+
+.form-title {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-img {
+    flex: 0 1 auto;
+}
+
+#logo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: auto;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.error-message {
+    font-size: 14px;
+}
+
+.formStep {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    display: none; /* Inicialmente oculto */
+}
+
+.formStep.active {
+    opacity: 1;
+    z-index: 1;
+    display: block; /* Exibe o passo ativo */
+}
+
+.formStep.leave {
+    transition: transform;
+    opacity: 0;
+    z-index: 0;
+}
+
+
+.sepElements {
+    display: flex; 
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    height: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.sepButtons {
+    display: flex;
+    bottom: 0;
+    right: 0;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.slide-left {
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 600px) {
+
+    .page {
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+
+
+}

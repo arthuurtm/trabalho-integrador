@@ -6,34 +6,35 @@
   <title>Cadastro</title>
   <link rel="stylesheet" href="../css/loginForm.css">
   <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/buttons.css">
+  <link rel="stylesheet" href="../css/elements.css">
 </head>
 <body>
   <div class="page">
-    <div class="formLogin">
+    <div class="form">
         <div class="left">
             <img src="../img/logo.png" alt="Logo" id="logo" />
             <h1>Fazer login</h1>
         </div>
         <div class="right">
-            <div class="formStep" data-step="1">
-                <form id="formStep1" class="formContainer">
-                    <div class="sepElements">
-                        <label for="personalName">E-mail</label>
-                        <input type="text" id="personalEmail" placeholder="Digite seu e-mail" />
-                
-                        <label for="lastName">Senha</label>
-                        <input type="password" id="password" placeholder="Digite sua senha" />
+            <form class="formContainer">
+                <div class="centered">
+                    <div class="formStep" id="step1">
+                        <div class="sepElements">
+                            <label for="personalName">E-mail</label>
+                            <input class="input" type="text" id="personalEmail" placeholder="Digite seu e-mail" />
+                    
+                            <label for="lastName">Senha</label>
+                            <input class="input" type="password" id="password" placeholder="Digite sua senha" />
+                        </div>
                     </div>
-                    <div class="sepButton">
-                        <button class="btn" type="submit">Continuar</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div class="sepButtons">
+                    <button class="btn confirm" id="nextButton" type="submit">Continuar</button>
+                </div>
+            </form>
         </div>
     </div>
   </div>
-
   <script src="../js/formModel.js"></script>
 </body>
 </html>

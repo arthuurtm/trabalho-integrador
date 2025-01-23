@@ -1,0 +1,144 @@
+.btn, .btn.destructive, .btn.confirm, .btn.cancel {
+    width: auto;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all linear 160ms;
+    margin: 5px;
+    color: #000;
+    border: 2px solid var(--border);
+    box-shadow: 4px 4px 0.5px 0.5px var(--border);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 0.5px 0.5px var(--border);
+}
+
+.btn.destructive:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 0.5px 0.5px var(--border);
+}
+
+.button-container {
+    display: flex;
+}
+
+#googleButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nsm7Bb-HzV7m-LgbsSe {
+    background-color: var(--bg) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--border) !important;
+}
+
+.S9gUrf-YoZ4jf {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#create-avatar-button {
+    position: fixed;
+    bottom: 20px;
+    z-index: 100;
+    width: 80px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input.select {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%231778FB" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Ícone de seta */
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-color: transparent;
+}
+
+.input.select option {
+    color: #000;
+}
+
+.input.date {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%231778FB" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-color: transparent;
+}
+
+.input.date::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    background: transparent;
+    padding-right: 10px;
+}
+
+.input.date::placeholder {
+    color: var(--input-placeholder);
+    opacity: 1;
+}
+
+.input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding: 12px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    transition: border-color 0.2s;
+    color: var(--input-text);
+    box-shadow: 2.5px 2.5px 0.5px 0.5px var(--border);
+}
+  
+.input:focus {
+    outline: none;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: column;
+}
+
+.star-rating label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stars {
+    display: flex;
+    gap: 8px;
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star-rating .star.active {
+    color: #FFD700;
+    transition: color 0.2s ease;
+}
+
+.star-rating .star.hover {
+    color: #FFD700;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+  
+.search-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    color: var(--icon-color);
+}
+  
+
