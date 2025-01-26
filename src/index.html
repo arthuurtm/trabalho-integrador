@@ -18,7 +18,7 @@
     />
     <link 
         rel="stylesheet" 
-        href="./css/navigator.css"
+        href="./css/header.css"
     />
     <link 
         rel="stylesheet" 
@@ -29,80 +29,80 @@
     ></script>
 </head>
 <body>
-    <div class="hide-menu" id="hide-menu">☰</div>
-    <div class="menu active" id="menu">
-        <div class="menu-content">
-            <div class="user-info">
-                <img src="img/profile.png" alt="Foto de perfil" class="profile-picture" />
-                <div class="mobile-adaptive-usrInfo">
-                    <p class="user-name">Nome Usuário</p>
-                    <p class="user-email">email@exemplo.com</p>
+    <header class="menu">
+        <div class="logo">
+            <img src="./img/light-logo.png" id="logo"/>
+        </div>
+        <div class="center">
+            <div class="search-bar">
+                <span class="material-symbols-outlined material-icons">search</span>
+                <input type="text" placeholder="Pesquise jogos, distribuidores...">
+            </div>
+        </div>
+        <div class="user-actions">
+            <div class="material-symbols-outlined">
+                shopping_cart
+            </div>
+            <div class="material-symbols-outlined">
+                account_circle
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Anúncios -->
+        <div class="ads-main-container">
+            <div class="goto left">
+                <p><</p>
+            </div>
+            <div class="ads-container">
+                <p>Anúncio</p>
+            </div>
+            <div class="goto right">
+                <p>></p>
+            </div>
+        </div>
+    
+        <!-- Produtos -->
+        <div class="products-main-container">
+          <div class="products-grid">
+                <div class="product-card publish">
+                    <a href="./views/cadastro_produto.html">
+                        <img src="/img/product.png" alt="Produto 1">
+                        <div class="data">
+                            <h3>Distribuir produto</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <img src="./img/product.png" alt="Produto 1">
+                    <div class="data">
+                        <h3>Produto 1</h3>
+                        <p>Informações do produto</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./img/product.png" alt="Produto 2">
+                    <div class="data">
+                        <h3>Produto 2</h3>
+                        <p>Informações do produto</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./img/product.png" alt="Produto 3">
+                    <div class="data">
+                        <h3>Produto 3</h3>
+                        <p>Informações do produto</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="./img/product.png" alt="Produto 4">
+                    <div class="data">
+                        <h3>Produto 4</h3>
+                        <p>Informações do produto</p>
+                    </div>
                 </div>
             </div>
-            <div class="center">
-                <nav class="menu-options">
-                    <ul>
-                        <li>
-                            <a href="views/login.html">
-                                <span class="material-symbols-outlined notranslate">login</span>
-                                <p>Entrar</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a 
-                            class="menu-link" 
-                            data-section="jogos"
-                            >
-                                <span class="material-symbols-outlined notranslate">sports_esports</span>
-                                <p>Jogos</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a 
-                                id="logoutMenuButton" 
-                            >
-                                <span class="material-symbols-outlined notranslate">logout</span>
-                                <p>Sair</p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
         </div>
-    </div>
-    <!--<div class="mainNav">
-        <div class="left">
-            <img src="./img/logo.png" id="logo"/>
-        </div>
-
-        <div class="center">
-            <div class="search-container">
-                <span class="material-symbols-outlined">search</span>
-                <input type="text" class="input" placeholder="Procure por jogos ou acessórios...">
-            </div>              
-        </div>
-        
-        <div class="right">
-            <li>
-                <span class="material-symbols-outlined">login</span>
-                <a href="./views/login.html">Entrar</a>
-            </li>
-        </div>
-    </div>
-    <div class="accountMenu" style="display: none;">
-        <div class="top">
-            
-        </div>
-        <div class="bottom">
-            <li>
-                <span class="material-symbols-outlined">inventory_2</span>
-                <a>Produtos</a>
-            </li>
-            <li>
-                <span class="material-symbols-outlined">reviews</span>
-                <a>Avaliações</a>
-            </li>
-        </div>
-    </div>-->
+    </main>
 </body>
 </html>
