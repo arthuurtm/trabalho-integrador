@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
-    const menuBtn = document.getElementById('hide-menu');
-    menuBtn.addEventListener('click', updateMenuState);
+    const modal = document.getElementById("userModal");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
 
-    function updateMenuState() {
-        if (menu.classList.contains('active')) {
-            menu.classList.remove('active');
-            menu.classList.add('minimized');
-        } else {
-            menu.classList.add('active');
-            menu.classList.remove('minimized');
+    openModal.addEventListener("click", () => {
+        modal.style.display = "flex";
+    });
+
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
         }
-    }
+    });
+
 });
