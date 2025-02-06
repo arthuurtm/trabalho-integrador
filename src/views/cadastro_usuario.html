@@ -10,6 +10,9 @@
 </head>
 <body>
 <div class="page">
+    <div id="error-message" class="error-message" style="display: none;">
+        × <span id="error-text"></span>
+    </div>
     <div class="form">
         <div class="left">
             <img src="../img/dark-logo.png" alt="Logo" id="logo" />
@@ -25,9 +28,6 @@
                             <input id="name" class="input" type="text" placeholder="Seu nome completo" />
                             <label for="username">Nome de Usuário</label>
                             <input id="username" class="input" type="text" placeholder="Seu nome de usuário" required />
-                            <div id="error-message-step1" class="error-message" style="display: none;">
-                                ⛔ <span id="error-text-step1"></span>
-                            </div>
                         </div>
                     </div>
                     
@@ -37,9 +37,6 @@
                             <input id="cpf" class="input" type="text" placeholder="Seu Cadastro de Pessoa Física (CPF)" required />
                             <label for="birthdate">Data de Nascimento</label>
                             <input id="birthdate" class="input date" type="date" placeholder="Sua data de nascimento" required />
-                            <div id="error-message-step2" class="error-message" style="display: none;">
-                                ⛔ <span id="error-text-step2"></span>
-                            </div>
                         </div>
                     </div>
         
@@ -49,9 +46,6 @@
                             <input id="cep" class="input" type="text" placeholder="CEP do seu endereço" required />
                             <label for="address">Endereço</label>
                             <input id="address" class="input" type="text" placeholder="Seu endereço" required />
-                            <div id="error-message-step3" class="error-message" style="display: none;">
-                                ⛔ <span id="error-text-step3"></span>
-                            </div>
                         </div>
                     </div>
 
@@ -61,9 +55,6 @@
                             <input id="email" class="input" type="email" placeholder="Seu e-mail" required />
                             <label for="tel">Telefone</label>
                             <input id="tel" class="input" type="tel" placeholder="Seu endereço" required />
-                            <div id="error-message-step3" class="error-message" style="display: none;">
-                                ⛔ <span id="error-text-step4"></span>
-                            </div>
                         </div>
                     </div>
         
@@ -73,9 +64,6 @@
                             <input id="psswd1" class="input" type="password" placeholder="Uma senha BEM segura" required />
                             <label for="psswd2">Confirme a senha</label>
                             <input id="psswd2" class="input" type="password" placeholder="Confirme sua senha" required />
-                            <div id="error-message-step4" class="error-message" style="display: none;">
-                                ⛔ <span id="error-text-step4"></span>
-                            </div>
                         </div>
                     </div>
                 </div>
