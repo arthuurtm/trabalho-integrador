@@ -36,6 +36,12 @@
     border: 1px solid var(--confirm-button);
 }
 
+.btn.buy {
+    background-color: #FFA41C;
+    color: white;
+    border: 1px solid #ddd;
+}
+
 .btn.symbolic {
     padding: 10px;
     border: none;

@@ -1,3 +1,5 @@
+@import url('elements.css');
+
 /* Tema claro */
 :root {
     --text: #000;
@@ -62,10 +64,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans', system-ui, sans-serif;
 }
 
 .noto-sans {
-  font-family: system-ui, sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;

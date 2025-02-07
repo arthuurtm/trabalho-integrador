@@ -1,94 +1,68 @@
-.menu {
-    z-index: 2;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-sizing: border-box;
-    overflow: hidden;
-    scrollbar-width: thin;
-    scrollbar-color: var(--bg) var(--bg);
-    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    border-right: 1px solid var(--border);
-    /* background-color: var(--menu); */
-}
-
-.menu-content {
+.navigator {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 240px;
     height: 100%;
-    width: auto;
+    background-color: var(--menu);
+    z-index: 999;
+    transition: transform 0.3s ease; /* Adiciona transição suave */
+    transform: translateX(100%); /* Oculta o navigator */
+    border-left: 1px solid var(--border);
 }
 
-.hide-menu {
+.navigator {
+    transform: translateX(0); /* Exibe o navigator */
+}
+
+.navigator.hidden {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.navigator.active {
+    right: 0; /* Exibe o navigator */
+}
+
+.hide-navigator {
     position: absolute;
-    top: 26px;
-    left: 16px;
-    transform: translateY(-50%);
+    top: 10px;
+    left: -40px; /* Posiciona o botão fora do navigator */
     font-size: 25px;
     cursor: pointer;
-    border-radius: 30px;
     color: var(--text);
-    border: none;
-    z-index: 3;
-    justify-content: center;
-    align-items: center;
+    z-index: 1000;
 }
 
-.menu.active .center ul li a p {
+.navigator.active .center ul li a p {
     display: unset;
 }
 
-.menu.active .center ul li,
-.menu.active .user-info,
-.menu.active header {
-    opacity: 1;
-    transform: translateY(0);
-    cursor: pointer;
-}
-
-.center {
-    margin-top: 100px;
-}
-
-.menu.minimized .center {
+.navigator.minimized .center {
     margin-top: 0;
 }
 
-.center ul {
+.navigator .center ul {
     list-style: none;
     margin: 0;
     transition: 0.5s ease;
 }
 
-.center ul li {
+.navigator.center ul li {
     padding: 5px 15px;
     transition: transform 0.3s ease;
 }
 
-.center ul li:hover {
+.navigator .center ul li:hover {
     transform: scale(1.1);
 }
 
-.center ul li a span {
+.navigator .center ul li a span {
     font-size: 24px;
 }
 
-.center ul li a {
+.navigator .center ul li a {
     text-decoration: none;
-}
-
-.user-info {
-    height: 40px;
-    margin-top: 20px;
-}
-
-.menu ul li a p,
-.user-info p,
-header {
-    /* display: none; */
-    transition: width 0.5s ease;
-}
-
-.hidden {
-    transition: width 0.2s ease, transform 0.5s ease, border 450ms ease-out !important;
-    transform: translateX(-100%);
 }
 
 .hide {
@@ -96,66 +70,69 @@ header {
     transition: opacity 0.5s ease;
 }
 
-.user-info {
-    position: relative;
-    text-align: center;
-    padding: 20px;
-}
-
-.user-info img.profile-picture {
-    width: 60px; /* Aumente o tamanho da imagem */
-    height: 60px; /* Garantir que a imagem tenha altura proporcional */
-    border-radius: 50%;
-}
-
-.user-name {
-    font-size: 18px;
-    margin: 5px 0;
-}
-
-.user-email {
-    font-size: 14px;
-    color: var(--mh-user-email);
-}
-
-.menu-options {
+.navigator-options {
     display: flex;
     align-items: center;
 }
 
-.menu-options ul {
+.navigator-options ul {
     list-style-type: none;
     padding: 0;
 }
 
-.menu-options li {
+.navigator-options li {
     padding-left: 15px;
     display: flex;
     list-style: none;
 }
 
-.menu-options a {
+.navigator-options a {
     display: flex;
     color: var(--mh-options);
     text-decoration: none;
     cursor: pointer;
 }
 
-.menu-options a p {
+.navigator-options a p {
     margin-left: 8px;
 }
 
-.menu-options a span {
+.navigator-options a span {
     margin-top: 15px;
 }
 
-.menu-options a:hover {
+.navigator-options a:hover {
+    color: var(--mh-options-hover);
+}
+
+.navigator-options {
+    padding: 20px;
+}
+
+.navigator-options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigator-options li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.navigator-options li p {
+    margin-left: 10px;
+    color: var(--text);
+}
+
+.navigator-options li:hover {
     color: var(--mh-options-hover);
 }
 
 
 /* Tela de PC/Laptop (portado do projeto principal*/
-.menu {
+.navigator {
     display: grid !important;
     grid-column: 1;
     border-radius: 15px;
@@ -165,63 +142,63 @@ header {
     transition: width 0.5s ease, transform 0.5s ease;
 }
 
-.menu.minimized {
-    width: 60px;
+.navigator.minimized {
+    transform: translateX(-100%);
 }
 
-.menu.active {
+.navigator.active {
     border-radius: 0px;
 }
 
-.menu .center ul li a p {
+.navigator .center ul li a p {
     opacity: 1;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateX(0);
 }
 
-.menu.minimized p {
+.navigator.minimized p {
     display: none;
     transition: font-size 0.3s ease;
 }
 
-.menu.minimized .center ul li a p {
+.navigator.minimized .center ul li a p {
     opacity: 0;
     transform: translateX(-20px);
     pointer-events: none;
 }
 
-.menu .center ul li a span {
+.navigator .center ul li a span {
     transition: transform 0.3s ease;
 }
 
-.menu.minimized .center ul li a span {
+.navigator.minimized .center ul li a span {
     transform: scale(1.2);
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.menu.minimized.hidden {
+.navigator.minimized.hidden {
     transform: translateX(-100%);
 }
 
-.menu.active.hidden {
+.navigator.active.hidden {
     transform: translateX(0%);
 }
 
-.menu .center ul {
+.navigator .center ul {
     transition: opacity 0.5s ease-in-out;
 }
 
-.menu .user-info img {
+.navigator .user-info img {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.menu.minimized .user-info {
+.navigator.minimized .user-info {
     margin-top: 100px;
     margin-bottom: 20px;
 }
 
-.menu.minimized .user-info img {
+.navigator.minimized .user-info img {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -231,6 +208,6 @@ header {
     margin-top: 10px;
 }
 
-.menu .invisible-drag-camp {
+.navigator .invisible-drag-camp {
     display: none;
 }

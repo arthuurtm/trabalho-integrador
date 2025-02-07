@@ -1,3 +1,10 @@
+#logo {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 120px;
+}
+
 .menu {
     background-color: var(--menu);
     color: var(--text2);
@@ -19,12 +26,20 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.menu .center.hidden {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    transform: translateY(-100%);
 }
 
 .menu .center .search-bar {
     display: flex;
     align-items: center;
-    background-color: #e4e0e0;
+    background-color: #f0f0f0;
     border-radius: 4px;
     padding: 5px 10px;
     margin: 0 20px;
